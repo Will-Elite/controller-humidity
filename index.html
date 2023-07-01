@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humidity at Elite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hiển thị nhiệt độ và độ ẩm tại Elite tuyệt vời nhất</h1>
+    
+
+    <div id="temperature"></div>
+    <div id="humidity"></div>
+    <div id="daterealtime"></div>
+    <div id="datetime"> </div>
+        <div class="datetime-container">
+            <span id="datetime1"></span>
+            <span id="datetime2"></span>
+        </div>
+    
+    <div class="button-status">
+        <div>Nút nhấn bật tắt thiết bị điện</div>
+    <div id="dataContainer-statusDevice"></div>
+    </div>
+    
+    <div id="dataContainer-statusWork"></div>
+    <button onclick="sendRequest('ON')">ON</button>
+    <button onclick="sendRequest('OFF')">OFF</button>
+
+    <div id="humidity-icon"></div>
+
+    <div id="humidity-text"></div>
+
+    <div id="humidity-textSetup"></div>
+
+    <div class="input-label">Cài đặt nhỏ hơn:</div>
+    <div class="input-container">
+        <input type="number" aria-label="import-number" id="smaller-input" min="0" max="100">
+        
+        <button onclick="updateHumiditySettings()">Cập nhật</button>
+    </div>
+
+    <div class="input-label">Cài đặt lớn hơn:</div>
+    <div class="input-container">
+        <input type="number" aria-label="import-number" id="bigger-input" min="0" max="100">
+        <button onclick="updateHumiditySettings()">Cập nhật</button>
+    </div>
+
+    <div id="warning-setup"></div>
+        <script src="script.js"></script>
+        <script src="script1.js"></script>
+        <script>
+            updateHumiditySettings();
+                     
+        </script>
+</body>
+</html>
+
+
+
+
