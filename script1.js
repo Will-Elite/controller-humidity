@@ -133,20 +133,6 @@ function updateData() {
 }
 
 
-function updateTemperature(temperature) {
-    var temperatureValueElement = document.getElementById("temperature-value");
-    var temperatureProgressElement = document.getElementById("temperature-progress");
-  
-    temperatureValueElement.textContent = temperature + "°C";
-  
-    // Tính toán góc dựa trên giá trị nhiệt độ (0-50)
-    var angle = (temperature / 50) * 270 - 45;
-    temperatureProgressElement.style.transform = "rotate(" + angle + "deg)";
-  }
-  
-  // Gọi hàm updateTemperature với giá trị nhiệt độ
-  updateTemperature(30); // Ví dụ giá trị nhiệt độ là 25
-
 // Gọi hàm updateData ban đầu
 updateData();
 
